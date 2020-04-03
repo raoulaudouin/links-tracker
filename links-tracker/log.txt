@@ -1,0 +1,11 @@
+URL                                                       CLICKS        FIRST DOWNLOAD        LAST DOWNLOAD         
+
+http://bar.com/foo                                        9             03 Apr 2020 21:22     03 Apr 2020 21:22     
+https://www.poetryproject.org/about                       4             03 Apr 2020 21:24     03 Apr 2020 21:24     
+http://username:password@hostname:9090/path?arg=value     2             03 Apr 2020 21:20     03 Apr 2020 21:20     
+http://example.com                                        2             03 Apr 2020 21:21     03 Apr 2020 21:22     
+https://www.poetryproject.org/publications                2             03 Apr 2020 21:23     03 Apr 2020 21:23     
+https://raoulaudouin.fr                                   1             03 Apr 2020 21:14     03 Apr 2020 21:14     
+https://www.poetryproject.org/learning                    1             03 Apr 2020 21:23     03 Apr 2020 21:23     
+
+7 LINKS                                                   21 CLICKS     
