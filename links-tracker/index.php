@@ -102,10 +102,10 @@ $firstColumnLength = strlen($firstColumnTitle);
 $secondColumnTitle = 'CLICKS';
 $secondColumnLength = strlen($secondColumnTitle);
 
-$thirdColumnTitle = 'FIRST DOWNLOAD';
+$thirdColumnTitle = 'FIRST CLICK';
 $thirdColumnLength = strlen($thirdColumnTitle);
 
-$fourthColumnTitle = 'LAST DOWNLOAD';
+$fourthColumnTitle = 'LAST CLICK';
 $fourthColumnLength = strlen($fourthColumnTitle);
 
 // get totals
