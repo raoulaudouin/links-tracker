@@ -79,7 +79,7 @@ elseif (!$newLink) {
 	$downloads[$currentDownloadKey]['lastDownload'] = $currentDownload['downloadTime'];
 }
 
-/* * * OVERWRITE JSON DATA * * */
+/* * * SORT LINKS BY AMOUNT OF DOWNLOADS * * */
 
 function sortByNumericalValue($array, $value) {
 	usort($array, function($a, $b) use ($value) {
@@ -89,6 +89,8 @@ function sortByNumericalValue($array, $value) {
 }
 
 $downloads = sortByNumericalValue($downloads, 'downloads');
+
+/* * * OVERWRITE JSON DATA * * */
 
 file_put_contents($jsonFile, json_encode($downloads));
 
