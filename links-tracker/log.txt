@@ -1,4 +1,4 @@
-URL                                                       CLICKS        FIRST DOWNLOAD        LAST DOWNLOAD         
+URL                                                       CLICKS        FIRST CLICK           LAST CLICK            
 
 http://bar.com/foo                                        9             03 Apr 2020 21:22     03 Apr 2020 21:22     
 https://www.poetryproject.org/about                       4             03 Apr 2020 21:24     03 Apr 2020 21:24     
