@@ -3,7 +3,10 @@
 /* * * LOG FILES * * */
 
 $jsonFile = 'log.json';
+if (file_exists($jsonFile) === false) { die('Error: cannot find JSON log file.'); }
+	
 $txtFile = 'log.txt';
+if (file_exists($txtFile) === false) { die('Error: cannot find text log file.'); }
 
 /* * * CLEAR DATA * * */
 
@@ -21,8 +24,8 @@ if (isset($_GET["clear"]) && !isset($_POST["cleared"])) {
 
 $url = isset($_GET["url"]) ? $_GET["url"] : false;
 
-if (filter_var($url, FILTER_VALIDATE_URL) === FALSE) {
-	die('Missing a redirection URL');
+if (filter_var($url, FILTER_VALIDATE_URL) === false) {
+	die('Error: missing a redirection URL');
 }
 
 /* * * FETCH CURRENT TIME * * */
@@ -138,10 +141,10 @@ foreach ($downloads as $download) {
 
 }
 
-$firstColumnLength += 5;
-$secondColumnLength += 5;
-$thirdColumnLength += 5;
-$fourthColumnLength += 5;
+$firstColumnLength += 4;
+$secondColumnLength += 4;
+$thirdColumnLength += 4;
+$fourthColumnLength += 4;
 
 // declare file
 
