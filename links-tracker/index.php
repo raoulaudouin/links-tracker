@@ -1,5 +1,9 @@
 <?
 
+/* * * SET DEFAULT TIMEZONE * * */
+
+date_default_timezone_set("Europe/Paris");
+
 /* * * LOG FILES * * */
 
 $jsonFile = 'log.json';
@@ -14,6 +18,15 @@ if (isset($_GET["clear"]) && !isset($_POST["cleared"])) {
 	echo 'Do you really want to clear the logs?'.PHP_EOL.'<form method="post"><input type="submit" name="cleared" value="confirm"></form>';
 	exit;
 } elseif (isset($_POST["cleared"])) {
+	
+	// archive JSON log file
+	$clearedTime = date('Y-m-d', time()).'T'.date('His', time());
+	$jsonData = file_get_contents($jsonFile);
+	$jsonArchive = fopen('log-'.$clearedTime.'.json', 'w') or die('Unable to create json archive');
+	fwrite($jsonArchive, $jsonData);
+	fclose($jsonArchive);
+	
+	// clear log files
 	file_put_contents($jsonFile, '');
 	file_put_contents($txtFile, 'NO DATA');
 	echo 'The logs are cleared.';
@@ -30,7 +43,6 @@ if (filter_var($url, FILTER_VALIDATE_URL) === false) {
 
 /* * * FETCH CURRENT TIME * * */
 
-date_default_timezone_set("Europe/Paris"); 
 $downloadTime = date('d M Y H:i', time());
 
 /* * * * * */
